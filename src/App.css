@@ -1,0 +1,30 @@
+.system-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.game-row {
+  margin-bottom: 20px;
+  border: 5px solid #eee;
+}
+
+.game-name {
+  background-color: #eee;
+}
+
+.game-actions .btn {
+  margin-right: 10px;
+}
+
+.nav {
+  margin-bottom: 20px;
+}
+
+#root {
+  padding-bottom: 100px;
+}
+
+.game-badges span {
+  font-family: monospace;
+  padding-right: 5px;
+}

@@ -1,0 +1,130 @@
+[
+  {
+    "id": "1",
+    "name": "Playstation",
+    "company": "Sony",
+    "release": "1995-09-09",
+    "comments": "The monster console that killed all comers",
+    "num": "93"
+  },
+  {
+    "id": "2",
+    "name": "64",
+    "company": "Nintendo",
+    "release": "1996-09-29",
+    "comments": "Known as a party system",
+    "num": "9"
+  },
+  {
+    "id": "3",
+    "name": "Gameboy",
+    "company": "Nintendo",
+    "release": "1989-07-31",
+    "comments": "I was 5 when this came out.nStill the best system to play tetris on.",
+    "num": "7"
+  },
+  {
+    "id": "4",
+    "name": "Playstation 2",
+    "company": "Sony",
+    "release": "2000-10-26",
+    "comments": "Pretty much the best system ever. EMOTION ENGINE!",
+    "num": "74"
+  },
+  {
+    "id": "5",
+    "name": "DS & 3DS",
+    "company": "Nintendo",
+    "release": "2006-06-11",
+    "comments": "DS Lite remains the only system I have bought on Release Day! On loan to Grandma Tito. 3DS is Special Edition for Zelda: A Link Between Worlds.",
+    "num": "6"
+  },
+  {
+    "id": "6",
+    "name": "Saturn",
+    "company": "Sega",
+    "release": "1995-05-11",
+    "comments": "The Sega Saturn. It's named after it's internal project name: Project Saturn. All Sega consoles were named after planets at the time.",
+    "num": "18"
+  },
+  {
+    "id": "7",
+    "name": "Entertainment System",
+    "company": "Nintendo",
+    "release": "1985-10-18",
+    "comments": "So many legendary game franchises got their start here.",
+    "num": "20"
+  },
+  {
+    "id": "8",
+    "name": "Game Boy Advanced",
+    "company": "Nintendo",
+    "release": "2001-06-11",
+    "comments": "More colors and two extra buttons than the old Game Boy. Also, it's games can be played on the DS.",
+    "num": "3"
+  },
+  {
+    "id": "9",
+    "name": "3D0",
+    "company": "Panasonic",
+    "release": "1993-10-04",
+    "comments": "Sometimes I laugh at myself for owning a 3D0. This thing was never top of the line. It's a good example of how it takes a certain type of company to make a game system work. ",
+    "num": "14"
+  },
+  {
+    "id": "10",
+    "name": "Dreamcast",
+    "company": "Sega",
+    "release": "1999-09-09",
+    "comments": "9-9-99 was a great day for gamers! Sega Dreamcast was the first system to have a modem in it from day one! It's VMU memory card was so powerful it could play games too! 4 controller ports for fun party games and a powerful processor to push graphics beyond the Playstation 2. Sadly, it was the final Sega console and left the market before it could really shine. I own a regular Dreamcast and a black Sega Sports one.",
+    "num": "14"
+  },
+  {
+    "id": "11",
+    "name": "Gamegear",
+    "company": "Sega",
+    "release": "1991-04-26",
+    "comments": "SEGA DOES WHAT NINTENDONT got used a lot with the Gamegear. It could do lots of colors and had a nice screen for the time. It was also a huge battery hog.",
+    "num": "2"
+  },
+  {
+    "id": "12",
+    "name": "Genesis",
+    "company": "Sega",
+    "release": "1989-08-14",
+    "comments": "The system that got me into gaming. This was a present from santa back when I was just a kid. Lots of fun playing games with my sister and Ben. I also own the Sega Nomad, the portable version of the Genesis. Bought the Nomad on March 10, 2007 at a pawn shop in Reno, NV.",
+    "num": "50"
+  },
+  {
+    "id": "13",
+    "name": "PC",
+    "company": "Wintel",
+    "release": "2010-12-16",
+    "comments": "Desktop Gaming PC. ",
+    "num": "7"
+  },
+  {
+    "id": "14",
+    "name": "TurboGrafx-16",
+    "company": "NEC",
+    "release": "1987-10-30",
+    "comments": "I own the japanese version, the PC Engine. Known for having lots of good SHMUP games.",
+    "num": "2"
+  },
+  {
+    "id": "15",
+    "name": "Playstation 3",
+    "company": "Sony",
+    "release": "2006-11-17",
+    "comments": "The big black expensive Playstation 3 was suppose to change computing with its CELL processors, but it ended up just being a really good game console and media center.",
+    "num": "6"
+  },
+  {
+    "id": "16",
+    "name": "Playstation 4",
+    "company": "Sony",
+    "release": "2013-11-15",
+    "comments": "Number four.",
+    "num": "0"
+  }
+]
