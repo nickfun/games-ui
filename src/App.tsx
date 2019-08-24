@@ -111,8 +111,8 @@ function buildStats(allGames: Game[], allSystems: System[]): Stats {
 }
 
 function fetchAllData() {
-  const games = axios.get('/games')
-  const systems = axios.get('/systems')
+  const games = axios.get('/api/games')
+  const systems = axios.get('/api/systems')
   return axios.all([games, systems]).then(results => {
     const setupGames = results[0].data.map((gameRow: any) => {
       return {
@@ -216,7 +216,7 @@ function sortGames(g: Game[]): Game[] {
   return g.sort(gameCompare);
 }
 
-/* 
+/*
 ===============
 
 APP CONTAINER
@@ -343,15 +343,15 @@ export class AppContainer extends React.Component<{}, AppState> {
     }
     switch (this.state.screen) {
       case SCREENS.SEARCH:
-        return <SearchScreen {...allProps} />;
+        return <PageRoot><SearchScreen {...allProps} /></PageRoot>;
       case SCREENS.EDIT_GAME:
-        return <EditGameScreen {...allProps} />;
+        return <PageRoot><EditGameScreen {...allProps} /></PageRoot>;
       case SCREENS.EDIT_SYSTEM:
-        return <EditSystemScreen {...allProps} />;
+        return <PageRoot><EditSystemScreen {...allProps} /></PageRoot>;
       case SCREENS.STATS:
-        return <StatsScreen {...allProps} />;
+        return <PageRoot><StatsScreen {...allProps} /></PageRoot>;
       default:
-        return <MainList {...allProps} />;
+        return <PageRoot><MainList {...allProps} /></PageRoot>;
     }
   }
 }
@@ -363,6 +363,18 @@ COMPONENTS
 
 =====================
 */
+
+const PageRoot: React.FC<any> = (props) => {
+  return (
+    <Container>
+      <Row>
+        <Col>
+        {props.children}
+        </Col>
+      </Row>
+    </Container>
+  )
+}
 
 const MainList: React.FC<APPDATA> = (props) => {
   const currentSystem = getCurrentSystem(props);
