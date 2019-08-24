@@ -44,6 +44,15 @@ interface Stats {
   [sysid: number]: number;
 }
 
+interface StatsAttributes {
+  has_case: number;
+  has_docs: number;
+  is_ghit: number;
+  is_limited: number;
+  is_complete: number;
+  is_broken: number;
+}
+
 // const ALL_SYSTEMS: System[] = require('./data/systems.json')
 // const ALL_GAMES: Game[] = require('./data/games.json')
 
@@ -108,6 +117,28 @@ function buildStats(allGames: Game[], allSystems: System[]): Stats {
     }
   });
   return s;
+}
+
+function buildAttributeStats(allGames: Game[], allSystems: System[]): StatsAttributes {
+  let data: StatsAttributes = {
+    has_case: 0,
+    has_docs: 0,
+    is_broken: 0,
+    is_complete: 0,
+    is_ghit: 0,
+    is_limited: 0,
+  };
+
+  allGames.forEach((g: Game) => {
+    data.has_case += g.has_case
+    data.has_docs += g.has_docs
+    data.is_broken += g.is_broken
+    data.is_complete += g.is_complete
+    data.is_ghit += g.is_ghit
+    data.is_limited += g.is_limited
+  });
+
+  return data;
 }
 
 function fetchAllData() {
@@ -478,7 +509,10 @@ const NavMenu: React.FC<APPDATA> = (props) => {
 
 const StatsScreen: React.FC<APPDATA> = (props) => {
   const stats = buildStats(props.games, props.systems);
+  const max = props.games.length
+  const attrs = buildAttributeStats(props.games, props.systems);
   const perSystem: JSX.Element[] = [];
+  const perAttribute: JSX.Element[] = [];
   var keyid = 1;
   Object.keys(stats).forEach(idx => {
     const i = Number(idx);
@@ -492,6 +526,15 @@ const StatsScreen: React.FC<APPDATA> = (props) => {
     perSystem.push(<dd key={keyid}>{c}</dd>);
     keyid++;
   });
+  Object.keys(attrs).forEach(idx => {
+    const val = (attrs as any)[idx];
+    const percent = Math.floor((val / max * 100) * 100) / 100;
+    const display = val + " (" + percent + "%)";
+    const key1 = "index-" + idx;
+    const key2 = "value-" + idx;
+    perAttribute.push(<dt key={key1}>{idx}</dt>);
+    perAttribute.push(<dd key={key2}>{display}</dd>);
+  });
   return (
     <div>
       <h1>Stats</h1>
@@ -504,6 +547,8 @@ const StatsScreen: React.FC<APPDATA> = (props) => {
             <p>{props.systems.length} Systems</p>
             <h3>Per System</h3>
             <dl>{perSystem}</dl>
+            <h3>By Attribute</h3>
+            <dl>{perAttribute}</dl>
           </Col>
         </Row>
       </Container>
