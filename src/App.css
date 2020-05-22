@@ -9,7 +9,9 @@
 }
 
 .game-name {
-  background-color: #eee;
+  /*background-color: #eee;*/
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .game-actions .btn {
